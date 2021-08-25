@@ -1,39 +1,46 @@
-body{background-color: #F5F6FA;}
-.bookList{
+body { background-color: #f5f6fa; }
+
+.bookList {
   width: 80%;
   margin: auto;
   margin-top: 100px;
   background-color: white;
 }
-.list-item{
-  border: 1px solid #F5F6FA;
+
+.list-item {
+  border: 1px solid #f5f6fa;
   padding-left: 20px;
 }
-.book-title{
+
+.book-title {
   font-weight: bold;
   font-size: 20px;
 }
-.book-category{
+
+.book-category {
   font-weight: 700;
-  color: #D5D5D5;
+  color: #d5d5d5;
   padding: 3px;
-}
-.book-author{
-  padding: 3px;
-  color: #4395D6;
 }
 
-.crudbtn{
+.book-author {
+  padding: 3px;
+  color: #4395d6;
+}
+
+.crudbtn {
   padding: 10px 0;
 }
 
-.crudbtn button{
-margin-right: 40px;
-/* padding: 3px; */
-color: #4395D6;
-background-color: white;
+.crudbtn button {
+  margin-right: 40px;
+
+  /* padding: 3px; */
+  color: #4395d6;
+  background-color: white;
 }
-.rmvbtn{
+
+.rmvbtn {
   border-left: 1px solid #32a1ce;
   border-right: 1px solid #32a1ce;
   border-top: none;
@@ -41,7 +48,8 @@ background-color: white;
   padding: 3px 25px;
 }
 
-.addbtn, .editbtn{
-  border:none;
+.addbtn,
+.editbtn {
+  border: none;
   padding: 3px 0;
 }
