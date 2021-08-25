@@ -1,10 +1,8 @@
-const addRemove=()=>{
-    return(
-        <div>
-            <button>Add</button>
-            <button>Remove</button>
-        </div>
-    );
-}
+const addRemove = () => (
+  <div>
+    <button type="button">Add</button>
+    <button type="button">Remove</button>
+  </div>
+);
 
-export default addRemove
+export default addRemove;

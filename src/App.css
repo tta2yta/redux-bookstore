@@ -8,3 +8,7 @@ body{background-color: #F5F6FA;}
 .list-item{
   border: 1px solid black;
 }
+.book-title{
+  font-weight: bold;
+  font-size: 20px;
+}
