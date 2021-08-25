@@ -1,6 +1,7 @@
+/* eslint-disable */
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import Book from './redux/book/Book';
+import Book from './components/books/BookList';
 import Categories from './redux/categories/categories';
 
 function App() {
