@@ -7,8 +7,26 @@ body{background-color: #F5F6FA;}
 }
 .list-item{
   border: 1px solid black;
+  padding-left: 20px;
 }
 .book-title{
   font-weight: bold;
   font-size: 20px;
+}
+.book-category{
+  font-weight: 700;
+  color: #D5D5D5;
+  padding: 3px;
+}
+.book-author{
+  padding: 3px;
+  color: #4395D6;
+}
+
+.crudbtn{
+  padding: 10px 0;
+}
+
+.crudbtn button{
+margin-right: 40px;
 }
