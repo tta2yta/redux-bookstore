@@ -6,7 +6,7 @@ body{background-color: #F5F6FA;}
   background-color: white;
 }
 .list-item{
-  border: 1px solid black;
+  border: 1px solid #F5F6FA;
   padding-left: 20px;
 }
 .book-title{
@@ -29,4 +29,19 @@ body{background-color: #F5F6FA;}
 
 .crudbtn button{
 margin-right: 40px;
+/* padding: 3px; */
+color: #4395D6;
+background-color: white;
+}
+.rmvbtn{
+  border-left: 1px solid #32a1ce;
+  border-right: 1px solid #32a1ce;
+  border-top: none;
+  border-bottom: none;
+  padding: 3px 25px;
+}
+
+.addbtn, .editbtn{
+  border:none;
+  padding: 3px 0;
 }
