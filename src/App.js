@@ -1,9 +1,10 @@
 import './App.css';
+import Book from './redux/book/Book';
 
 function App() {
   return (
     <div className="App">
-      <h1>book store</h1>
+      <Book />
     </div>
   );
 }
