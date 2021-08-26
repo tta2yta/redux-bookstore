@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import AddRemove from '../addRemove';
 import { addBook, removeBook } from '../../redux/book/actions/bookActions';
-
+import BookForm  from './BookForm'
 
 import { useSelector } from 'react-redux';
 const Book = () => {
@@ -31,6 +31,7 @@ const Book = () => {
   // ]);
 
   return (
+    <>
     <div className="bookList">
       {books.map((item) => (
         <div key={item.key} className="list-item">
@@ -43,6 +44,10 @@ const Book = () => {
       ))}
 
     </div>
+    <div>
+      <BookForm />
+    </div>
+    </>
   );
 };
 
