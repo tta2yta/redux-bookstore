@@ -28,7 +28,7 @@ const bookForm = () => {
   };
   return (
     <div className="add-book">
-      <h2>ADD NEW BOOK</h2>
+      <h4>ADD NEW BOOK</h4>
       <form>
         <input type="text" placeholder="Book Title" value={title} onChange={handleOnChange} />
         <select name="categories" id="categories" onChange={handleOnSelect}>
