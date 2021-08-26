@@ -13,7 +13,6 @@ const bookForm = () => {
       title,
       category,
     };
-    console.log(newBook);
     dispatch(addBook(newBook));
   };
   const handleOnChange = (e) => {
@@ -29,7 +28,7 @@ const bookForm = () => {
       <form>
         <input type="text" placeholder="Book Title" value={title} onChange={handleOnChange} />
         <select name="categories" id="categories" onChange={handleOnSelect}>
-          <option value="fiction" selected>Fiction</option>
+          <option value="fiction" defaultValue="fiction">Fiction</option>
           <option value="scifiction">Science Fiction</option>
 
           <option value="romance">Romance</option>

@@ -1,6 +1,5 @@
 const initialState = [];
 const bookReducer = (state = initialState, action) => {
-  console.log(action.type);
   switch (action.type) {
     case 'ADD_BOOK':
       return [...state, action.payLoad];

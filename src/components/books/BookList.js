@@ -14,7 +14,6 @@ const Book = () => {
             <div className="book-title">{item.title}</div>
             <div className="book-author">{item.author}</div>
             <AddRemove itemId={item.id} />
-            {console.log(item.id)}
           </div>
 
         ))}
