@@ -14,13 +14,10 @@ const bookForm = () => {
       category,
     };
     console.log(newBook);
-    // console.log(addBook());
     dispatch(addBook(newBook));
-    console.log(addBook(newBook));
   };
   const handleOnChange = (e) => {
     setTitle(e.target.value);
-    console.log(title);
   };
 
   const handleOnSelect = (e) => {

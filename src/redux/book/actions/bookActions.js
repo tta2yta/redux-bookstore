@@ -1,5 +1,5 @@
 const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
 export const addBook = (payLoad) => ({
   type: ADD_BOOK,
   payLoad,

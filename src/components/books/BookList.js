@@ -9,11 +9,12 @@ const Book = () => {
     <>
       <div className="bookList">
         {books.map((item) => (
-          <div key={item.key} className="list-item">
+          <div key={item.id} className="list-item">
             <div className="book-category">{item.category}</div>
             <div className="book-title">{item.title}</div>
             <div className="book-author">{item.author}</div>
-            <AddRemove />
+            <AddRemove itemId={item.id} />
+            {console.log(item.id)}
           </div>
 
         ))}
