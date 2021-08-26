@@ -14,8 +14,9 @@ const bookForm = () => {
       category,
     };
     console.log(newBook);
-    console.log(addBook());
-    dispatch(addBook());
+    // console.log(addBook());
+    dispatch(addBook(newBook));
+    console.log(addBook(newBook));
   };
   const handleOnChange = (e) => {
     setTitle(e.target.value);
