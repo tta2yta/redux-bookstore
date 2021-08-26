@@ -1,4 +1,3 @@
-/* eslint no-underscore-dangle: 0 */
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import bookReducer from './book/booksReducer';

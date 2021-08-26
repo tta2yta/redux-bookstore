@@ -1,4 +1,3 @@
-/* eslint-disable */
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Book from './components/books/BookList';
