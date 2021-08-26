@@ -56,7 +56,8 @@ body { background-color: #f5f6fa; }
 
 .add-book{
   width: 80%;
-  margin: auto;
+  margin: 20px auto;
+  border-top: 2px solid #dddee4;
 }
 .add-book h4{
   margin-bottom: 5px;
