@@ -1,6 +1,6 @@
 /* eslint no-underscore-dangle: 0 */
-import { createStore, combineReducers } from 'redux';
-// import logger from 'redux-logger';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
 import bookReducer from './book/booksReducer';
 
 const reducer = combineReducers({
@@ -9,7 +9,7 @@ const reducer = combineReducers({
 
 const store = createStore(
   reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(logger),
 );
 
 export default store;
