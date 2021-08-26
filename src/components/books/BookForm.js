@@ -2,10 +2,12 @@ import { useState } from 'react';
 
 const bookForm = () => {
   const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('fiction');
   const submitBookToStore = () => {
     const newBook = {
+      id: Math.floor(Math.random() * 100),
       title,
+      category,
     };
     console.log(newBook);
   };
@@ -23,7 +25,7 @@ const bookForm = () => {
       <form>
         <input type="text" placeholder="Book Title" value={title} onChange={handleOnChange} />
         <select name="categories" id="categories" onChange={handleOnSelect}>
-          <option value="fiction">Fiction</option>
+          <option value="fiction" selected>Fiction</option>
           <option value="scifiction">Science Fiction</option>
 
           <option value="romance">Romance</option>
@@ -31,7 +33,7 @@ const bookForm = () => {
           <option value="tech">Technology</option>
 
         </select>
-        <input type="button" value="ADD BOOk" onChange={submitBookToStore} />
+        <input type="button" value="ADD BOOK" onClick={submitBookToStore} />
       </form>
     </div>
   );
