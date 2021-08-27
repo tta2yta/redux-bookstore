@@ -3,7 +3,8 @@ import AddRemove from '../addRemove';
 import BookForm from './BookForm';
 
 const Book = () => {
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books.books);
+  console.log(books);
 
   return (
     <>

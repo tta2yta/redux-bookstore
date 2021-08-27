@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useDispatch } from 'react-redux';
-import { addBook } from '../../redux/book/actions/bookActions';
+import { addBook, getBooksApiId } from '../../redux/book/actions/bookActions';
 
 const bookForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('fiction');
+
+  useEffect(() => {
+    dispatch(getBooksApiId());
+  }, []);
+
   const submitBookToStore = () => {
     const newBook = {
       id: Math.floor(Math.random() * 100),
