@@ -7,6 +7,8 @@ const bookReducer = (state = initialState, action) => {
       return state.filter((item) => item.id !== action.payLoad);
     case 'GET_BOOKS':
       return state= action.payLoad
+    case 'GET_APIID':
+      return state=action.payLoad
     default:
       return state;
   }
