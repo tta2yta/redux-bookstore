@@ -24,7 +24,19 @@ export const fetchBooks = () => async (dispatch) => {
     headers: { 'content-type': 'application/json' },
   });
   const response = await result.json();
-  books.push(response);
+  // eslint-disable-next-line no-restricted-syntax
+  for (const [key, value] of Object.entries(response)) {
+    const id = key;
+    const obj = value;
+    const book = {
+      item_id: id,
+      title: obj[0].title,
+      category: obj[0].category,
+    };
+    books.push(book);
+  }
+  console.log(books);
+  // books.push(response);
   console.log(response);
   if (response) {
     dispatch({
