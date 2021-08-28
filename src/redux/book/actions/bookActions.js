@@ -5,7 +5,7 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOKS = 'GET_BOOKS';
 const GET_APIID = 'GET_APIID';
 
-const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cF90aS533hJGfCJadIOC';
+const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cF90aS533hJGfCJadIOC/books';
 
 export const addBook = (payLoad) => ({
   type: ADD_BOOK,
@@ -23,6 +23,7 @@ export const fetchBooks = () => async (dispatch) => {
     headers: { 'content-type': 'application/json' },
   });
   const response = await result.json();
+  console.log(response);
   if (response) {
     dispatch({
       type: GET_BOOKS,
@@ -48,10 +49,17 @@ export const getBooksApiId = () => async (dispatch) => {
   }
 };
 export const addBookApi = (book) => async (dispatch) => {
-  const response = axios.post(apiUrl, book);
-  if (response) {
-    dispatch(getBooksApiId);
-  } else {
-    console.log('unable to load data');
-  }
+  console.log(book);
+  // const response = await axios.post(apiUrl, JSON.Stringify(book)).then((result) => result.data);
+  // console.log(response);
+  fetch(apiUrl, {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: book.id, title: book.title, category: book.category,
+    }),
+  }).then(dispatch(fetchBooks()));
 };

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useDispatch } from 'react-redux';
-import { addBook, getBooksApiId } from '../../redux/book/actions/bookActions';
+import { addBookApi, getBooksApiId } from '../../redux/book/actions/bookActions';
 
 const bookForm = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,8 @@ const bookForm = () => {
       author,
       category,
     };
-    dispatch(addBook(newBook));
+    // dispatch(addBook(newBook));
+    dispatch(addBookApi(newBook));
   };
   const handleOnChangeTitle = (e) => {
     setTitle(e.target.value);
