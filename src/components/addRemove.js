@@ -1,11 +1,12 @@
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/book/actions/bookActions';
+import { deleteBookApi } from '../redux/book/actions/bookActions';
 
 const addRemove = (props) => {
   const id = props.itemId;
   const dispatch = useDispatch();
   const removeBookItem = () => {
-    dispatch(removeBook(id));
+    // dispatch(removeBook(id));
+    dispatch(deleteBookApi(id));
   };
   return (
     <div className="crudbtn">

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useDispatch } from 'react-redux';
-import { addBookApi, getBooksApiId } from '../../redux/book/actions/bookActions';
+import { addBookApi, fetchBooks, getBooksApiId } from '../../redux/book/actions/bookActions';
 
 const bookForm = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,7 @@ const bookForm = () => {
   const [category, setCategory] = useState('fiction');
 
   useEffect(() => {
+    dispatch(fetchBooks());
     dispatch(getBooksApiId());
   }, []);
 
