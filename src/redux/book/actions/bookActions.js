@@ -77,3 +77,10 @@ export const addBookApi = (book) => async (dispatch) => {
     }),
   }).then(dispatch(fetchBooks()));
 };
+
+const deleteBookApi=(id)= async(dispatch)=>{
+const response= axios.delete(apiUrl, {item_id:id})
+.then(res=> res.data)
+.catch(err=>console.log((err)));
+
+}
