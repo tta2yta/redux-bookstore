@@ -5,6 +5,8 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOKS = 'GET_BOOKS';
 const GET_APIID = 'GET_APIID';
 
+const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cF90aS533hJGfCJadIOC';
+
 export const addBook = (payLoad) => ({
   type: ADD_BOOK,
   payLoad,
@@ -16,7 +18,7 @@ export const removeBook = (payLoad) => ({
 });
 
 export const fetchBooks = () => async (dispatch) => {
-  const result = await fetch('', {
+  const result = await fetch(apiUrl, {
     method: 'GET',
     headers: { 'content-type': 'application/json' },
   });
@@ -34,7 +36,6 @@ export const fetchBooks = () => async (dispatch) => {
 export const getBooksApiId = () => async (dispatch) => {
   const appId = await axios.post(
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/',
-    {},
   );
   console.log(appId.data);
   if (appId) {
@@ -44,5 +45,13 @@ export const getBooksApiId = () => async (dispatch) => {
     });
   } else {
     console.log('can not get api id');
+  }
+};
+export const addBookApi = (book) => async (dispatch) => {
+  const response = axios.post(apiUrl, book);
+  if (response) {
+    dispatch(getBooksApiId);
+  } else {
+    console.log('unable to load data');
   }
 };
