@@ -18,16 +18,18 @@ export const removeBook = (payLoad) => ({
 });
 
 export const fetchBooks = () => async (dispatch) => {
+  const books = [];
   const result = await fetch(apiUrl, {
     method: 'GET',
     headers: { 'content-type': 'application/json' },
   });
   const response = await result.json();
+  books.push(response);
   console.log(response);
   if (response) {
     dispatch({
       type: GET_BOOKS,
-      payLoad: response,
+      payLoad: books,
     });
   } else {
     console.log('Unable to fetch data');
