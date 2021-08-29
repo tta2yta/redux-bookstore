@@ -78,14 +78,14 @@ export const addBookApi = (book) => async (dispatch) => {
   }).then(dispatch(fetchBooks()));
 };
 
-export const deleteBookApi = (id) => async () => {
+export const deleteBookApi = (id) => async (dispatch) => {
+  console.log(id);
   axios
-    .delete(apiUrl, {
-      item_id: id,
+    .delete(`${apiUrl}/${id}`, {
       headers: {
         'Access-Control-Allow-Origin': true,
       },
     })
-    .then((result) => result.data)
+    .then(dispatch(fetchBooks()))
     .catch(() => 'error');
 };
